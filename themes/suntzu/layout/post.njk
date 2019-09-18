@@ -36,21 +36,23 @@
         </div>
     </div>
 </article>
-{% if theme.disqus %}
+
+{% if page.comments and theme.disqus %}
 <div class="disqus-comments" itemprop="comment">
     <div class="comments">
         <div id="disqus_thread"></div>
     </div>
 </div>
 <script>
-    var url_parts = window.location.href.split("?");
-    var disqus_url = url_parts[0];
-    (function () {
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = "//#{theme.disqus}.disqus.com/embed.js";
-        (document.head || d.body ).appendChild(dsq);
+    var disqus_config = function () {
+        this.page.url = '{{ page.permalink }}';
+        this.page.identifier = '{{ page._id }}';
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cnicodeme.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
     })();
 </script>
 {% endif %}
