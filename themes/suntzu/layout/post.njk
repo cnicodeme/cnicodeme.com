@@ -26,12 +26,12 @@
     <div class="read-next">
         <div class="previous">
             {% if page.next %}
-            <a href="{{ url_for(page.next.path) }}" alt="Read my next article: {{ page.next.title }}">← {{ page.next.title }}</a>
+            <a href="{{ url_for(page.next.path) }}" alt="Read my next article: {{ page.next.title }}">←&nbsp;{{ page.next.title }}</a>
             {% endif %}
         </div>
         <div class="next">
             {% if page.prev %}
-            <a href="{{ url_for(page.prev.path) }}" alt="Read my prev article: {{ page.prev.title }}">{{ page.prev.title }} →</a>
+            <a href="{{ url_for(page.prev.path) }}" alt="Read my prev article: {{ page.prev.title }}">{{ page.prev.title }}&nbsp;→</a>
             {% endif %}
         </div>
     </div>
