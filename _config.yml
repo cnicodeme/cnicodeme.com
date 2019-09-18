@@ -88,9 +88,8 @@ theme: suntzu
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: netlify
-  token: de6b398fbf24ad60fae609e4b481607efbcda5d7878dce2a8b9a5def0d7e1162
-  site_id: 26455008-35eb-42db-b1fd-1595ae3cc2dc
+  - type: git
+    repo: git@github.com:cnicodeme/cnicodeme.com.git
 
 sitemap:
   path: sitemap.xml

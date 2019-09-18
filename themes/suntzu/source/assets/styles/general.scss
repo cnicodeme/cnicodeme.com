@@ -1,5 +1,13 @@
 @import '_reset';
 
+/*
+ * Thanks to 
+ *  - https://pjrvs.com/
+ *  - https://meowni.ca/
+ *
+ * For the inspiration about the design
+ */
+
 @font-face {
     font-family: 'fontello';
     src: url('/assets/fonts/fontello.eot?71874145');
@@ -59,6 +67,10 @@ body {
     color: #454646;
     letter-spacing: -0.004em;
     padding: 80px 40px 40px 80px;
+}
+
+h1, h2, h3 {
+    text-align: left;
 }
 
 h1 {
@@ -319,6 +331,11 @@ main>article {
 
     pre {
         margin: 20px 0 !important;
+
+        &, code {
+            width: 100%;
+            max-width: 100%;
+        }
     }
 
     &.page {
@@ -334,6 +351,15 @@ main>article {
 
         div {
             display: block;
+            &:first-child {
+                text-align: left;
+                margin-right: 10px;
+            }
+
+            &:last-child {
+                text-align: right;
+                margin-left: 10px;
+            }
         }
     }
 }
@@ -431,7 +457,7 @@ main>section.archives {
     }
 
     body>main div.image img {
-        width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -441,6 +467,6 @@ main>section.archives {
     }
 
     body>main div.image img {
-        width: 100%;
+        max-width: 100%;
     }
 }
