@@ -1,0 +1,10 @@
+{% extends 'partials/base.njk' %}
+
+{% block content %}
+<article class="page" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 itemprop="headline name">{{ page.title }}</h1>
+    <main itemprop="articleBody" id="article-body">
+        {{ page.content }}
+    </main>
+</article>
+{% endblock %}

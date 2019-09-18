@@ -1,0 +1,13 @@
+        <meta property="og:title" content="{{ (page.title + " - " + config.title) if page.title else config.title }}">
+        <meta property="og:type" content="blog">
+        {% if page.thumbnail %}<meta property="og:image" content="{{ page.thumbnail }}">{% endif %}
+        {% if url_for(theme.favicon) != '/' %}<meta property="og:image" content="{{ url_for(theme.favicon) }}">{% endif %}
+        <meta property="og:url" content="{{ page.permalink if page.permalink else config.url }}">
+        <meta property="og:site_name" content="{{ config.title }}">
+        {% if page.excerpt %}
+        <meta property="og:description" content="{{ page.excerpt | striptags }}">
+        {% elif page.description %}
+        <meta property="og:description" content="{{ page.description }}">
+        {% elif config.description %}
+        <meta property="og:description" content="{{ config.description }}">
+        {% endif %}

@@ -1,0 +1,33 @@
+{% extends 'partials/base.njk' %}
+
+{% block content %}
+    <section itemscope itemtype="http://schema.org/Blog">
+        <ul class="articles">
+            {% for post in page.posts.toArray() %}
+            <li>
+                <a href="{{ url_for(post.path) }}" title="{{ post.title }}">
+                    <h2>{{ post.title | replace('<br />', ' ') | striptags }}</h2>
+                </a>
+                <p class="excerpt">
+                    {{ post.excerpt|striptags if post.excerpt else post.description }}
+                </p>
+            </li>
+            {% endfor %}
+        </ul>
+
+        {% if page.prev or page.next %}
+        <ul class="pagination">
+            {% if page.prev %}
+            <li>
+                <a href="{{ url_for('/' + config.pagination_dir + '/' + page.prev if page.prev > 1 else '/') }}" title="View older posts →">Recent posts →</a>
+            </li>
+            {% endif %}
+            {% if page.next %}
+            <li>
+                <a href="{{ url_for('/' + config.pagination_dir + '/' + page.next) }}" title="← Back to latest posts">← View older posts</a>
+            </li>
+            {% endif %}
+        </ul>
+        {% endif %}
+    </section>
+{% endblock %}

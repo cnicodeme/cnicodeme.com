@@ -1,0 +1,57 @@
+{% extends 'partials/base.njk' %}
+
+{% block content %}
+<article class="article" itemscope itemtype="http://schema.org/BlogPosting">
+    <link itemprop="mainEntityOfPage" href="{{ page.permalink if page.permalink else config.url }}" />
+    <meta itemprop="inLanguage" content="en" />
+    <h1 itemprop="headline name">{{ page.title }}</h1>
+    <div class="details">
+        <span itemscope itemtype="http://schema.org/Person" itemprop="author">
+        Written on
+        <span><time datetime="{{ date_xml(page.date) }}" itemprop="dateCreated datePublished dateModified">{{ full_date(page.date, "MMM D, YYYY") }}</time></span>
+         - 
+        <span class="reading-time" itemprop="timeRequired">{{ readingTime(page.content, 'min read') }}</span>
+    </div>
+    <main itemprop="articleBody">
+        {% if in_category(page.categories.first(), 'case-study') %}
+        <p class="sub">
+            Every week, I write about a product that appeared on ProductHunt and share my thougts.
+            I am not affiliated with the products and the content of the post here are my point of view uniquely.
+            The idea is to give some feedback and hopefully share some valuables tips on how to grow a business.
+        </p>
+        {% endif %}
+
+        {{ page.content }}
+    </main>
+    <div class="read-next">
+        <div class="previous">
+            {% if page.next %}
+            <a href="{{ url_for(page.next.path) }}" alt="Read my next article: {{ page.next.title }}">← {{ page.next.title }}</a>
+            {% endif %}
+        </div>
+        <div class="next">
+            {% if page.prev %}
+            <a href="{{ url_for(page.prev.path) }}" alt="Read my prev article: {{ page.prev.title }}">{{ page.prev.title }} →</a>
+            {% endif %}
+        </div>
+    </div>
+</article>
+{% if theme.disqus %}
+<div class="disqus-comments" itemprop="comment">
+    <div class="comments">
+        <div id="disqus_thread"></div>
+    </div>
+</div>
+<script>
+    var url_parts = window.location.href.split("?");
+    var disqus_url = url_parts[0];
+    (function () {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = "//#{theme.disqus}.disqus.com/embed.js";
+        (document.head || d.body ).appendChild(dsq);
+    })();
+</script>
+{% endif %}
+{% endblock %}

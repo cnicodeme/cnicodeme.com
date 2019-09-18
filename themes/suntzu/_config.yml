@@ -1,0 +1,27 @@
+menu:
+  About: /about/
+  Posts: /
+  Archives: /archives/
+
+socials:
+  github: cnicodeme
+  twitter: cx42net
+  linkedin: cyrilnicodeme
+  email: mailto:contact@cnicodeme.com
+
+# favicon:
+
+#Put into /source
+avatar: avatar.jpeg
+
+feed: /atom.xml
+
+comment:
+  # false, disqus, netease or facebook
+  enable: disqus
+  # disqus user, netease productKey or facebook appid 
+  id: 
+  # [facebook only] plugin language 
+  lang: en_US
+  # [facebook only] number of posts per load
+  numposts: 10

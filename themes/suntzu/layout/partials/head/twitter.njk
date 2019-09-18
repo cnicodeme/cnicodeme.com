@@ -1,0 +1,15 @@
+        {% if theme.twitter.creator %}<meta name="twitter:creator" content="@{{ theme.twitter.creator }}">{% endif %}
+        <meta name="twitter:card" content="summary">
+        {% if theme.socials.twitter %}
+        <meta name="twitter:site" content="@{{ theme.socials.twitter }}">
+        <meta name="twitter:creator" content="@{{ theme.socials.twitter }}">
+        {% endif %}
+        <meta name="twitter:title" content="{{ (page.title + " - " + config.title) if page.title else config.title }}">
+        {% if page.excerpt %}
+        <meta name="twitter:description" content="{{ page.excerpt | striptags }}">
+        {% elif page.description %}
+        <meta name="twitter:description" content="{{ page.description }}">
+        {% elif config.description %}
+        <meta name="twitter:description" content="{{ config.description }}">
+        {% endif %}
+        {% if page.thumbnail or theme.favicon %}<meta name="twitter:image" content="{{ url_for(page.thumbnail) if page.thumbnail else url_for(theme.favicon) }}">{% endif %}
