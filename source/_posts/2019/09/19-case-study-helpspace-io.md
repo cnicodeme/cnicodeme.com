@@ -2,7 +2,7 @@
 title: 'Case study: Helpspace.io'
 categories:
   - Case Study
-description: Short description of what's its about
+description: "Helpspace.io is another customer support product that got my attention on ProductHunt for a few reasons: the name is easy to remember, the design of the landing page is nice and customer support is a trending market. All in all, I think the makers behind Helpspace have a chance to do something nice with their tool, and that's why I decided to do a case study about it."
 thumbnail: helpspace.png
 date: 2019-09-19 14:31:09
 ---
