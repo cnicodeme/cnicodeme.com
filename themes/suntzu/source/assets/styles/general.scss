@@ -365,6 +365,23 @@ main {
         }
     }
 
+    .warning {
+        margin: 20px 0;
+        font-weight: bold;
+
+        background-color: #f6f6f6;
+        color: #555;
+        padding: 5px;
+        border-radius: 5px;
+
+        &:before {
+            display: inline-block;
+            font-size: 1.2em;
+            margin: 0 5px;
+            content: "⚠";
+        }
+    }
+
     .page {
         h1 {
             margin-bottom: 40px;

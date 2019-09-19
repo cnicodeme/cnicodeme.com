@@ -49,7 +49,7 @@ It first starts with the item right after the hero ... For me, it's a second her
 
 You should stick with one. I know it's difficult and I **highly recommend you to spend a lot of time crafting the text**.
 
-> This utterly important because it's the first thing your visitor will read.
+<p class="warning">This utterly important because it's the first thing your visitor will read.</p>
 
 If you don't catch their attention there, you might lose them even before they start scrolling!
 
@@ -108,7 +108,7 @@ The next part contains a list of what you can do, but it includes two things tha
 
 I know that these are often included as service by your competitor, but you should focus on your core service (handling emails) and build features around it, like a canned response, rules, team assignment, etc.
 
-> If you follow the features of your competitor, you will be just like them. If you are just like them, you won't differentiate and you will be lost in the crowd.
+<p class="warning">If you follow the features of your competitor, you will be just like them. If you are just like them, you won't differentiate and you will be lost in the crowd.</p>
 
 Here's what I would do instead (but again, this is my point of view):
 
