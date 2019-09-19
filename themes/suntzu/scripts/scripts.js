@@ -109,6 +109,24 @@ hexo.extend.filter.register('before_post_render', function (post) {
     }
 })
 
+hexo.extend.filter.register('after_post_render', function(data) {
+    data.content = data.content.replace(':)', '🙂');
+    data.content = data.content.replace(':-)', '🙂');
+    data.content = data.content.replace(';)', '😉');
+    data.content = data.content.replace(';-)', '😉');
+    data.content = data.content.replace(':D', '😁');
+    data.content = data.content.replace(':-D', '😁');
+    data.content = data.content.replace(':p', '😛');
+    data.content = data.content.replace(':P', '😛');
+    data.content = data.content.replace(':-p', '😛');
+    data.content = data.content.replace(':-P', '😛');
+    data.content = data.content.replace(':|', '😐');
+    data.content = data.content.replace(':-|', '😐');
+    data.content = data.content.replace(':o', '😮');
+    data.content = data.content.replace(':-o', '😮');
+    data.content = data.content.replace('<3', '❤️');
+})
+
 hexo.extend.filter.register('before_render:nunjucks', function SplitFilter (env) {
     env.addFilter('json', function (str) {
         for (let k in str) {

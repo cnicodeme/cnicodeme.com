@@ -15,13 +15,20 @@
     <main itemprop="articleBody">
         {% if in_category(page.categories.first(), 'case-study') %}
         <p class="sub">
-            Every week, I write about a product that appeared on ProductHunt and share my thougts.
-            I am not affiliated with the products and the content of the post here are my point of view uniquely.
+            Every week, I write about a product that appeared on ProductHunt and share my thoughts.
+            I am not affiliated with {{ page.product_name if page.product_name else "the service" }} and the content of the post here are my points of view uniquely.
             The idea is to give some feedback and hopefully share some valuables tips on how to grow a business.
         </p>
         {% endif %}
 
         {{ page.content }}
+
+        {% if in_category(page.categories.first(), 'case-study') %}
+        <p class="conclusion">
+            What did you think? Do you agree or not at all? Share your thoughts on the comments 🙂<br />
+            <small>(This review is my advice on {{ page.product_name if page.product_name else "the service" }} and mine only. It might not be correct or justified to implement them.)</small>
+        </>
+        {% endif %}
     </main>
     <div class="read-next">
         <div class="previous">

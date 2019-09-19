@@ -119,6 +119,7 @@ body > sidebar {
                     font-weight: bold;
                     font-size: 1rem;
                     color: #444;
+                    text-align: center;
                     text-decoration: none;
                 }
     
@@ -159,7 +160,7 @@ body > sidebar {
             flex-direction: column;
             align-items: center;
 
-            margin-top: 20px;
+            margin-top: 60px;
             a {
                 color: #444;
                 text-decoration: none;
@@ -246,7 +247,7 @@ main .articles li {
     }
 }
 
-main>article {
+main {
     text-align: justify;
 
     h1 {
@@ -271,7 +272,6 @@ main>article {
         display: inline-block;
 
         &:before {
-            content: '# ';
             color: #444;
         }
 
@@ -286,12 +286,27 @@ main>article {
         }
     }
 
+    h4 {
+        font-weight: bold;
+        font-size: 16px;
+        margin: 40px 0 10px;
+    }
+
     p {
         margin-bottom: 10px;
 
         a {
             margin: 0;
         }
+    }
+    
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ddd;
+        padding: 0; 
+        margin: 40px 0;
     }
 
     .details {
@@ -310,6 +325,7 @@ main>article {
 
         img {
             max-height: 400px;
+            max-width: 100%;
             padding: 0;
         }
 
@@ -329,6 +345,17 @@ main>article {
         }
     }
 
+    ul, ol {
+        margin: 0 0 20px 30px;
+    }
+
+    ul>li {list-style-type: disc;}
+    ol>li {list-style-type: number;}
+
+    strong {font-weight: bold}
+    em {font-style: italic}
+    small {font-size: 0.9em}
+
     pre {
         margin: 20px 0 !important;
 
@@ -338,13 +365,20 @@ main>article {
         }
     }
 
-    &.page {
+    .page {
         h1 {
             margin-bottom: 40px;
         }
     }
 
-    &>.read-next {
+    p.conclusion {
+        border-top: solid 1px #ddd;
+        margin-top: 40px;
+        padding-top: 40px;
+        font-style: italic;
+    }
+
+    article>.read-next {
         margin-top: 40px;
         display: flex;
         justify-content: space-between;
@@ -409,6 +443,7 @@ main>section.archives {
     body {
         flex-direction: column;
         padding: 40px;
+        min-width: 350px;
     }
 
     body>sidebar {
