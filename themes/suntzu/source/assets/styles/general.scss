@@ -1,5 +1,7 @@
 @import '_reset';
 
+html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
+
 /*
  * Thanks to 
  *  - https://pjrvs.com/
@@ -61,12 +63,10 @@
 }
 
 body {
-    display: flex;
     font: 400 16px/1.66 -apple-system,BlinkMacSystemFont,San Francisco,Helvetica Neue,Helvetica,Ubuntu,Roboto,Noto,Segoe UI,Arial,sans-serif;
     font-size: 16px;
     color: #454646;
     letter-spacing: -0.004em;
-    padding: 80px 40px 40px 80px;
 }
 
 h1, h2, h3 {
@@ -91,8 +91,8 @@ h3 {
 }
 
 body > sidebar {
+    padding: 80px 20px 0 80px;
     position: fixed;
-    margin-right: 80px;
 
     &>div {
         display: flex;
@@ -204,7 +204,8 @@ body > sidebar {
 
 body>main {
     max-width: 700px;
-    margin-left: 220px;
+    padding: 80px 20px 0 20px;
+    margin-left: 270px;
 
     animation-duration: .25s;
     animation-fill-mode: both;
