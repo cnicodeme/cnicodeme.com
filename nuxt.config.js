@@ -244,6 +244,7 @@ export default async () => {
     */
     generate: {
       dir: 'dist',
+      // minify: false, // Doesn't work great :s
       devtools: false,
       async routes () {
         let routes = await getDynamicPaths({

@@ -118,8 +118,8 @@ export default {
     }
 
     if (this.thumbnail) {
-      head.meta.push({ hid: 'twitter:image', name: 'twitter:image', content: this.thumbnail })
-      head.meta.push({ hid: 'og:image', name: 'og:image', content: this.thumbnail })
+      head.meta.push({ hid: 'twitter:image', name: 'twitter:image', content: 'https://cnicodeme.com' + this.thumbnail.src })
+      head.meta.push({ hid: 'og:image', name: 'og:image', content: 'https://cnicodeme.com' + this.thumbnail.src })
     }
 
     return head
