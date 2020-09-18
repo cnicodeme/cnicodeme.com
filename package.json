@@ -17,7 +17,7 @@
     "baguettebox.js": "^1.11.1",
     "frontmatter-markdown-loader": "^3.3.0",
     "html-to-text": "^5.1.1",
-    "lazysizes": "^5.2.0",
+    "lazysizes": "^5.2.1",
     "moment": "^2.24.0",
     "nuxt": "^2.0.0",
     "nuxt-jsonld": "^1.4.5",
