@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Cyril Nicodeme&apos;s blog</title>
+        <link>https://cnicodeme.com/atom.xml</link>
+        <description>Adventures of a web developer.</description>
+        <lastBuildDate>Thu, 16 Apr 2020 23:11:19 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>https://github.com/nuxt-community/feed-module</generator>
+        <item>
+            <title><![CDATA[This blog is now on NuxtJS 😀]]></title>
+            <link>https://cnicodeme.com/posts/this-blog-is-now-on-nuxtjs</link>
+            <guid>https://cnicodeme.com/posts/this-blog-is-now-on-nuxtjs</guid>
+            <pubDate>Thu, 16 Apr 2020 20:59:27 GMT</pubDate>
+            <description><![CDATA[ebsite/blog, but it's quite limited when you want to
+do a bit more than just blogging. I had my eyes on VuePress a bit but was open
+to other tools. My only requirements were using either Python or Javascript,
+with a preference for Javascript for its popularity (and thus more chances to
+have some interesting modules ready). I quickly narrowed down to Gatsby and
+Nuxt, and since I'm not a big fan of React, the decision to try Nuxt was made.
+Now, I had to understand how everything works. For this, I'm grateful for
+[Derkinzi.de](https://derkinzi.de/nuxt-jam-stack/), which gave me enough great
+stuff to get started. After that, I had to implement all the nifty things that
+make this blog running. Not all is perfect, mostly the fact that the markdown
+content is loaded (and compiled!) almost every time needed (Routes, Feeds,
+posts, etc). I'll work on that. So here's what I worked on: * Implemented
+Markdown for the blog post. This was quite hard because I wanted to implement a
+custom Image processor in the markdown... * Custom Image processor, that locally
+download external images and generate various sizes of them. * A Sitemap
+generator, that includes custom routes * A Feed generator, in both Atom and RSS2
+* Prism plugins for syntax highlighting * Disqus plugin for the comments *
+Advanced meta tags details for social networks and JSON-LD The website is
+already available publicly at
+[Github](https://github.com/cnicodeme/cnicodeme.com), so you can already take a
+look and see for yourself, but I plan to make a dedicated blog post explaining
+how I've implemented every part to help anyone....]]></description>
+            <content:encoded><![CDATA[It's been quite some time that I wanted to change the engine behind
+[cnicodeme.com](https://cnicodeme.com) but I didn't know which one to choose.
+Previously, this blog was using [Hexo](https://hexo.io). It's a nice tool to
+quickly generate a static website/blog, but it's quite limited when you want to
+do a bit more than just blogging. I had my eyes on VuePress a bit but was open
+to other tools. My only requirements were using either Python or Javascript,
+with a preference for Javascript for its popularity (and thus more chances to
+have some interesting modules ready). I quickly narrowed down to Gatsby and
+Nuxt, and since I'm not a big fan of React, the decision to try Nuxt was made.
+Now, I had to understand how everything works. For this, I'm grateful for
+[Derkinzi.de](https://derkinzi.de/nuxt-jam-stack/), which gave me enough great
+stuff to get started. After that, I had to implement all the nifty things that
+make this blog running. Not all is perfect, mostly the fact that the markdown
+content is loaded (and compiled!) almost every time needed (Routes, Feeds,
+posts, etc). I'll work on that. So here's what I worked on: * Implemented
+Markdown for the blog post. This was quite hard because I wanted to implement a
+custom Image processor in the markdown... * Custom Image processor, that locally
+download external images and generate various sizes of them. * A Sitemap
+generator, that includes custom routes * A Feed generator, in both Atom and RSS2
+* Prism plugins for syntax highlighting * Disqus plugin for the comments *
+Advanced meta tags details for social networks and JSON-LD The website is
+already available publicly at
+[Github](https://github.com/cnicodeme/cnicodeme.com), so you can already take a
+look and see for yourself, but I plan to make a dedicated blog post explaining
+how I've implemented every part to help anyone.]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Case study: Helpspace.io]]></title>
+            <link>https://cnicodeme.com/posts/case-study-helpspace-io</link>
+            <guid>https://cnicodeme.com/posts/case-study-helpspace-io</guid>
+            <pubDate>Thu, 19 Sep 2019 14:31:09 GMT</pubDate>
+            <description><![CDATA[Helpspace.io is another customer support product that got my attention on ProductHunt for a few reasons: the name is easy to remember, the design of the landing page is nice and customer support is a trending market. All in all, I think the makers behind Helpspace have a chance to do something nice with their tool, and that's why I decided to do a case study about it.]]></description>
+            <content:encoded><![CDATA[[Helpspace.io](https://helpspace.io) is a customer support product that got my
+attention on ProductHunt for a few reasons: * The name is easy to remember * The
+design of the landing page is nice * Customer support is a trending market All
+in all, I think the makers behind Helpspace have a chance to do something nice
+with their tool, and that's why I decided to do a case study about it. --- I
+initially used [GrooveHQ](https://groovehq.com) for quite some time. It was the
+best tool and worked nice, but they increased the price twice and ended up in a
+pricing strategy that wasn't for me ($19 per seat monthly, with a minimum of two
+seats ... For a sole founder, it doesn't make sense.) I am currently using
+[Front](https://frontapp.com) which provides a complete tool for a good price,
+but it has its few quirks. For instance, Twitter's integration comes at
+$20/month. It's too much when you are on the $9/month plan!! Needless to say
+that I spent a fair amount of time comparing a lot of competitors, looking at
+their features, pricing, options, and differences. So when I saw this newcomer,
+I was interested to know more about it, and the first impressions are positives.
+_An earlier version of this post was targetting the makers directly by saying
+"you", but it gave an arrogant tone to the document, and as such, has been
+rewritten. It wasn't my intention to give this feeling._ ### Feedback There are
+currently two main ways to offer a landing page: * A short version with links
+that point to specific pages (features, pricing, etc) * Or a long version that
+contains everything. Bonus to point to also have a (not duplicated) dedicated
+page for each point for SEO and advanced explanations. Helpspace's landing page
+is nice because the design is lightweight but as a potential user, I think I was
+expecting more. The main lacking point I found was the absence of the price
+directly accessible. Let me explain: I started to scroll, eager to see the
+features, and they started to convince me (great!), so my next thought was "how
+much?". But from there, I couldn't find the pricing options: I had to go all up
+to find it on the menu. I would recommend either have the pricing options on the
+landing page directly (where a quick scroll brings it into view) or have a
+sticky menu to always have access to the pricing page. _Bonus point if you set
+the pricing page next to the features, as it was my next thought._ #### Hero
+Also called Above the fold. It's the most important element of any website
+because visitors that are hesitating will leave your website if the hero doesn't
+convince them. The image is great because it shows the potentially interested
+visitors what they'll get if they create an account, and it looks like the
+makers have made an interesting work in analyzing their persona: The
+simplification of the image is made in such a way that for someone that knows
+how customer support works, it's easy to target the messages, the comments, the
+user's info, etc. Nice job! One point that bothers me though, is the headline.
+If you scroll a little bit, you'll get this: Keep Your Support Under Control
+With HelpSpace you will keep your incoming requests and questions in line and
+won't fail your customers!
+
+This feels like a headline... too. There already is a headline in the hero
+section so I would recommend choosing between one of them. Both are great and
+this might depend on everyone, but what I highly recommend is to **spend a lot
+of time working on the phrasing and the words used**.This utterly important
+because it's the first thing your visitor will read. They need to understand it
+without reading every word. If you don't catch their attention there, you might
+lose them even before they start scrolling!
+
+#### Video explainer Customer support tools can quickly become feature-rich and
+having just an image on the landing page might not convey all the great features
+the service has to offer. What I would recommend instead, is to keep this image
+(love it!) but add a "play" icon in the middle that suggests a video. When the
+visitor will click on it, a modal would open with a 1-1:30 minutes video of what
+Helpspace has to offer. More and more visitors now rely on video to have a quick
+understanding of what a service does, and offering this as the first step for
+your visitors (remember, it's the first thing they'll see), will play an
+important role in your conversion rate. #### Features One big issue of Helpspace
+is the competitive market. And other than fighting on the price, another
+possibility is to fight on the features, and how they are available. The
+features section of Helpspace works great because it's light but goes straight
+to the point. The fact that it's not screenshots, but real **interactive**
+elements instead is a nice touch! But it can be a double-edged sword! Being used
+to have non-interactive elements, I thought they were animated gif and didn't
+bother to click on it. The first feature is great because it shows you how
+Helpspace solves a frequent problem: How to handle multiple channels. The
+colored pills? Clever! The second feature shows how neat the interface is when
+replying, and how the details (tag, date, etc) are displayed. This gives an
+insight into what to expect if you create an account. Unfortunately, the
+interactive integration leaves me eager: I'd like to know what happens when I
+click on each item (tag, canned response, users?, three dots?) because clearly,
+I can (a "hover" effect is applied when you place your mouse over the icons),
+but when you click on it, nothing happens. I'm pretty sure putting these
+elements here instead of the basic screenshot was a lot of work, but what I
+would recommend instead, is animated images (can be gif, or small videos),
+showing what can be done. The video format helps the visitors understand they
+won't be able to interact while showing them what can be done. Since Helpspace
+is pretty recent, I'm sure that the dev team is hard in working on the set of
+features, and I would recommend them to put at least one more feature here once
+it's ready. For information, here's what I would expect from a customer support
+service. Of course, depending on the vision of the founders, not everything
+will/might be implemented, but it can help :) * Canned responses * Snooze (mark
+a message to be re-opened later) * Automations rules * Team management
+(assigning tickets for instance) * Search engine (with filters maybe, like
+GMail?) As for animated sequences, here are a few suggestions: * Receiving a new
+email * (Quickly) replying to an email * Replying using a canned response *
+Adding a rule to automate the workflow * Assign the ticket to someone on your
+team * Change the status of an email (to a custom one maybe?) * Search over all
+your messages * Switch the view from open/archived/deleted #### Pricing As I've
+mentioned earlier, I would recommend having an "always accessible" way to view
+the pricing. It could be on a sticky menu that stays at the top or place the
+pricing directly on the page. The idea is to have visitors do the less work
+possible up to the account creation (and get that precious email). By the way,
+on a side note, I would recommend to also have the pricing plan in the footer.
+It's not the case on Helpspace's website but it can only help ;) On the pricing
+plan per se, here are a few suggestions I would do: * I would offer two email
+channels instead of one. Why is that? Simply because with only one email
+channel, what is the difference between my inbox and Helpspace? By providing
+two, you start to differentiate. * Limiting to 5 emails on the Pro plan at this
+price is good, but convey the idea that Helpspace is only made for small
+businesses. If the idea is to attract bigger customers, I recommend offering
+some kind of "Enterprise plan" with higher limits.Pricing is hard. I recommend
+you to try - a lot - and don't hesitate to increase the prices too.
+
+As for the enterprise plan, one possible way to make it work with bigger clients
+is to set a base price (say, $49 for 20 channels) and then mention a "+$2/m per
+channels after that". #### Don't go in too many directions Customer support is a
+wide area and can integrate many many extra features. Helpspace suggests they
+are working on two future features (at the time of the writing): * Ticket tasks
+* Knowledge base These are very interesting features, and clearly, features that
+might be asked in the long run, but what I would recommend to the Helpspace team
+instead, is to first focus on the core features of a customer support service.
+Things like canned responses, rules, team assignments, tags, are - in my opinion
+- more important to implement. Then, once each of the core features are
+implemented and works great, and only then, I would recommend starting to add
+satellite features.If you follow the features of your competitor, you will be
+just like them. If you are just like them, you won't differentiate and you will
+be lost in the crowd.
+
+Here's what I would do (but again, this is my point of view): I would focus on
+the missing features that are essential when handling support (automated
+responses via rules, canned responses, office hours, etc) and put the ticket
+tasks and knowledge base items in the pending todo list. With only the core
+features, I would be able to lower the price. Yes, this is tricky because
+everyone says "increase your price", but in Helpspace case, they are in a very
+competitive market and the price will be a big decision maker since they are
+new. Take a look at this diagram:The idea behind this is to get a lot of new
+customers that are not looking for tons of features (... like knowledge base)
+but just want a nice interface to manage their support. Helpspace will fit
+perfectly right in. This will help you grow, get **customer feedback**, improve
+the service and add more core features or master the current one. Once you will
+have reached a certain amount of customers and have implemented all the core
+features, you will then be able to work on the extensions, offering tickets,
+knowledge base and even more, and increase your price from there (or offer these
+as paid features). ## Conclusion Helpspace looks nice and I think the makers are
+on the great track of having a really cool SaaS product. I hope my thoughts were
+helpful and I wish them good luck!]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Generating PDF documents in Python — The easy way]]></title>
+            <link>https://cnicodeme.com/posts/generating-pdf-documents-in-python-the-easy-way</link>
+            <guid>https://cnicodeme.com/posts/generating-pdf-documents-in-python-the-easy-way</guid>
+            <pubDate>Thu, 16 May 2019 17:45:11 GMT</pubDate>
+            <description><![CDATA[Generating a PDF document can be hell. Here, we’ll try to make that simpler by using PDFShift.io powerful API.]]></description>
+            <content:encoded><![CDATA[_Generating a PDF document can be hell. Here, we’ll try to make that simpler by
+using [PDFShift.io](https://pdfshift.io) powerful API. (Plot twist: I’m the
+founder 😲)_ **_What if I told you it was easy as sending a POST request? Take a
+look:_** ```python response = requests.post(
+'https://api.pdfshift.io/v2/convert/', auth=(api_key, ''), json={'source':
+raw_html} ) with open('document.pdf', 'wb') as f: f.write(response.content) ```
+See? Now, let me say the same thing, but longer: As a developer, you might find
+yourself facing the needs to generate a PDF for your application. It could be an
+invoice to be sent by email, a report to share to your users, or a blog post to
+be shared to your user’s user. One simple, efficient and quick way to do that is
+to first create your document in HTML format. You already master the HTML/CSS
+elements and can move them like a Jedi, so why not? All you have to do is
+convert the HTML into PDF and voilà! Your work is done.Once you have your HTML
+document ready, one way you can do to get your PDF is by using an API.
+[PDFShift](https://pdfshift.io) provides just that, and getting a PDF is as easy
+as: ```bash POST https://api.pdfshift.io/v2/convert/ -d source={url} ``` The
+first thing you will need is an API key to generate the documents without
+watermark. [Create your account on PDFShift.](https://pdfshift.io/register/) You
+will get your API key by email right after hitting submit and the free account
+will let you convert 50 documents per month. 👉 [_Create your account on
+PDFShift here._](https://pdfshift.io/register/) We’ll then use the requests
+library to do the work. It allows you to make network request really easy and
+simplify all the tedious part of it. Will start simple, converting your local
+HTML document to a PDF with no special stuff involved: ```python import requests
+raw_html = None with open('./document.html', 'r') as f: raw_html = f.read()
+api_key = 'your_pdfshift_api_key' response = requests.post(
+'https://api.pdfshift.io/v2/convert/', auth=(api_key, ''), json={'source':
+raw_html} ) # We now ensure that the conversion was successful try:
+response.raise_for_status() except: # Here, we handle any error that might have
+occured pass with open('result.pdf', 'wb') as fout: fout.write(response.content)
+print('Done') exit(1) ``` A few lines of code later, your application is now
+generating PDF documents.I could stop here, but I’m not sure you realized how
+lucky you are. So let me share my point of view. ## Why is this better than
+using {wkhtmltopdf/docker/some_library}? Good question! One easy answer:
+**_headaches_**! Installing a local software, running your own Docker instance
+or using a PDF library made for your programming language are all possibilities
+to generate PDF, but with all of these come a great bargain: maintenance. You
+will have to update the software and library, making sure the processes haven’t
+stopped, or that your Docker server has shut down for an unexpected reason.
+Moreover, you might not be able to do some advanced things like the one we’ll
+cover next. ## Ensuring all your charts are correctly loaded Now, you are just
+getting started and you want to generate a PDF of your report to send to all
+your customers on a monthly basis. The issue is that the PDF returned is made
+_before_ the charts have all been loaded, making your PDF useless. PDFShift
+provides a parameter that let you wait on your document to be finished before
+continuing the conversion. This is useful here because you can wait for all your
+charts to be rendered before generating the PDF, ensuring that the document
+you’ll get back are _perfect_. This parameter is wait_for and the value is just
+the name of a javascript function that will be globally present (think window).
+Here’s the initial code, with the wait_for parameter: ```python import requests
+raw_html = None with open('./document.html', 'r') as f: raw_html = f.read()
+api_key = 'your_pdfshift_api_key' response = requests.post(
+'https://api.pdfshift.io/v2/convert/', auth=(api_key, ''), json={ 'source':
+raw_html, 'wait_for': 'pdfshiftReady' # That's just the line we added ... } ) #
+We now ensure that the conversion was successful try:
+response.raise_for_status() except: # Here, we handle any error that might have
+occured pass with open('result.pdf', 'wb') as fout: fout.write(response.content)
+print('Done') exit(1) ``` ## Processing multiple documents at once Now imagine
+you have tons of documents to generate, one per user. Sending a POST request for
+each of them will take time and waiting for the result back might takes days of
+running process, hoping nothing will break in the middle! On the other hand,
+what you can do is send the conversion in batch, up to 50 per request, and don’t
+have to wait for the result to come back. Imagine you load your entire user's
+database and want to generate a custom report for each of them. This script will
+do exactly that and will be processed in a few minutes. All you’ll need is a
+publicly available endpoint that will receive a POST request from us (we love
+POST) containing an URL to your generated PDF content! We’ve taken this case and
+made a code just for you to see: ```python import requests from database import
+db # This is just for the example here api_key = 'your_pdfshift_api_key' # We
+could improve this part too users = db.execute('SELECT id FROM users WHERE
+removed IS NULL').all() # Splitting users in chunks of 50: chunks = [users[i:i +
+50] for i in range(0, len(users), 50)] for c in chunks: # Creating custom URL
+for each of our users urls =
+['https://your-website.com/report/user?id={0}'.format(x['id']) for x in c]
+response = requests.post( 'https://api.pdfshift.io/v2/convert/', auth=(api_key,
+''), json={ 'source': urls, 'webhook':
+'https://your-website.com/report/webhooks/pdfshift' } ) # We now ensure that the
+conversion was successful try: response.raise_for_status() except: # Here, we
+handle any error that might have occured pass print('Done') exit(1) ``` ##
+Another real case study, sending an invoice by email When I first started
+PDFShift, it was because of a recurring issue I had. I wanted my customers to
+receive a real, nicely designed PDF invoice of their purchase. The issue was
+that I was using a library at the time that required tons of dependencies that
+had to be installed as a system package directly. Without them, the library
+wouldn’t work (and even with some of them, it would still fail). Setting all up
+was costing me a few hours every time and I was getting bored. So I like to use
+this example as a real case study because … well … it’s a real case study :) As
+you’ll see, the code is a bit long, but converting HTML to PDF only takes a few
+lines of code, the rest is just email stuff (but interesting, still!): ```python
+import requests import email, smtplib, ssl from email import encoders from
+email.mime.base import MIMEBase from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText pdfshift_api_key = 'your_pdfshift_api_key'
+raw_html = None with open('./templates/invoice.html', 'r') as f: raw_html =
+f.read() response = requests.post( 'https://api.pdfshift.io/v2/convert/',
+auth=(pdfshift_api_key, ''), json={ 'source': raw_html, } ) # We now ensure that
+the conversion was successful try: response.raise_for_status() except: # Here,
+we handle any error that might have occured pass # Create a multipart message
+and set headers message = MIMEMultipart() message["From"] =
+'support@your-service.com' message["To"] = 'customer@gmail.com'
+message["Subject"] = 'Thank you for your purchase! Here\'s your invoice!' # Add
+body to email with open('./emails/invoice.txt', 'r') as f:
+message.attach(MIMEText(f.read(), "plain")) part = MIMEBase("application",
+"octet-stream") part.set_payload(response.content) # Here! We attach PDFShift
+binary response! encoders.encode_base64(part) part.add_header(
+"Content-Disposition", "attachment; filename= invoice.pdf", )
+message.attach(part) complete_email = message.as_string() # Log in to server
+using secure context and send email context = ssl.create_default_context() with
+smtplib.SMTP_SSL("smtp.mail-provider.com", 465, context=context) as server:
+server.login('your_email', 'your_password')
+server.sendmail('support@your-service.com', 'customer@gmail.com',
+complete_email) exit(1) ``` ## Conclusion Creating a PDF document can be tedious
+when we don’t have the right tool at our disposal. On the other hand, most of us
+have been writing HTML/CSS documents for years now and can quickly build a page
+this way. [PDFShift](https://pdfshift.io) lets you convert these HTML documents
+in PDF in just a simple POST request and works everywhere. With it, you don’t
+have to worry anymore about maintenance, updates, and compatibility issues. _At
+[PDFShift](https://pdfshift.io), our motto is the same as the Unix philosophy:
+We do one thing, and we do it well._]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[The story behind ImprovMX]]></title>
+            <link>https://cnicodeme.com/posts/the-story-behind-improvmx</link>
+            <guid>https://cnicodeme.com/posts/the-story-behind-improvmx</guid>
+            <pubDate>Wed, 15 May 2019 10:40:55 GMT</pubDate>
+            <description><![CDATA[We recently bought ImprovMX. I share here the decision behind it and our plans on how to grow the service.]]></description>
+            <content:encoded><![CDATA[I always had a passion to work with emails. SMTP, POP, and IMAP are filling my
+stomach with butterflies (something must be off in my brain) and after having
+sold [VoilaNorbert](https://voilanorbert.com), I was still eager to build Python
+code that connects to SMTP servers through sockets… I’ve been using and I knew
+about [ImprovMX](https://improvmx.com) for many years and it was, for me, one of
+the tools that were always present. The issue was that the support was non-
+existent and if you had the misfortune of having a typo in your email, you could
+say goodbye to using [ImprovMX](https://improvmx.com) (true story). For this
+reason, I searched the owner of [ImprovMX](https://improvmx.com) and offered to
+acquire it in the objective to improve and grow the service. Turns out he was
+open to discussion and we quickly found common ground. Thank you, Alex! :) I was
+excited to acquire [ImprovMX](https://improvmx.com), provide great customer
+support and improve, iterate and make [ImprovMX](https://improvmx.com) a best in
+class for email forwarding. Once the transition was complete, I initially
+started changing completely how the emails were handled. It was initially using
+Postfix, but we decided to scratch this and build a customized suite in Python
+that allows us to do almost everything we wanted, including being able to know
+how many emails are in forwarding chain (how many we received, how many got
+accepted and how many got delivered). We had to implement many systems to avoid
+spam abuse, greylisting and blacklisting, and we are getting better and better
+over time. After that, we worked with Antoine on making a new website to show
+our commitment to providing a great service. We focus on what we do best: Making
+a simple, yet powerful service for everyone to use. You can get started quickly
+and forwarding emails just takes a few steps and can now be done in a few
+minutes. Email, in general, is not a piece of cake. Along with all the
+intricacies of having to manage SPF, SRS, DKIM, DMARC, you also have to fight
+against spammers, getting blacklisted from time to time because some spams
+manage to get through your service, and tons of other vicious things that make
+email …. _so awesome_! What excites me the most with
+[ImprovMX](https://improvmx.com) is the reach. We are just getting started here
+and forwarding is just the beginning. We have so many projects in mind related
+to email that we need to define a clear roadmap for the future and be sure to
+play our cards well. The way we structured our servers and how we wrote the code
+will allow us to extend and be able to, in the near future, provide many great
+features to help our customers, help developers and provide more than just email
+forwarding. We are just getting started, and we are eager!]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[On difficulties to monetize a marketplace]]></title>
+            <link>https://cnicodeme.com/posts/on-difficulties-to-monetize-a-marketplace</link>
+            <guid>https://cnicodeme.com/posts/on-difficulties-to-monetize-a-marketplace</guid>
+            <pubDate>Fri, 16 Nov 2018 12:15:40 GMT</pubDate>
+            <description><![CDATA[We recently switched Transferslot to a new model, one that only accepts profitable projects. We know this is a big step and will greatly reduce the number of submissions, but on the other hand, the products that will be published will be of better quality, with a beginning of market validation and a potential for growth that are more interesting.]]></description>
+            <content:encoded><![CDATA[We recently switched [Transferslot](https://transferslot.com) to a new model,
+one that only accepts profitable projects. We know this is a big step and will
+greatly reduce the number of submissions, but on the other hand, the products
+that will be published will be of better quality, with a beginning of market
+validation and a potential for growth that are more interesting. While making
+this decision, we had a long (and unfinished) talk about how we could monetize
+[Transferslot](https://transferslot.com) in such a way that is a win-win for
+everyone. Many ideas came up, and I think it’s interesting to share them here.
+It might help other owners of different marketplaces along with giving you an
+idea of what we thought of each possibility. ### The obvious one: Listing fee Of
+course, we could do like the main one does; asking for a payment when submitting
+a project. Having been on the seller side of Flippa, I know that I didn’t mind
+much about paying for listing my project. I had a fair idea of how much it would
+cost, how much I would gain from it so I was able to make a rational decision on
+how which option to choose. The issue is that it’s 1) not the case for everyone,
+2) doesn’t guarantee you a successful sale. The point 2 is, for me, the most
+important one here! We don’t think that it’s fair as a marketplace provider to
+ask for payment for something that might not work. We want our seller to be
+happy if they pay us, not crossing fingers and hope for the best. ### Paying for
+options One of the things we offer right now, and one that I like quite the
+most, is offering the listing for free but offering options that aren’t free.
+Two things we currently offer are the option to be private, and being on a
+dedicated newsletter. The dedicated newsletter is really interesting because it
+clearly shows the interest for the seller (increased visibility) and can easily
+justify the cost (currently at 50$). That’s one strategy that Flippa implements
+too (even though their price for having a dedicated newsletter are way higher,
+but they also have way more subscribers!). ### Limiting the number of buyer’s
+requests. One other option we discussed, and almost implemented, was to allow
+for three buyer’s requests to be sent to the seller, then block the future
+messages. If the seller wanted to read them, he would have to pay us to “unlock”
+the pending messages. At first, it looks like the listing fee option; There is
+still no way that the sale will be successful, and it’s true. The reason why we
+still thought it would be a good idea was that with the listing fee, you don’t
+have a clue about the potential of your sale. With this solution, if you have
+more than 3 requests, it means you got some interests, and thus a higher chance
+to sell. One con about it is that if the seller doesn’t decide to pay, the
+potential pending buyers won’t receive a response and will think that either the
+seller or [Transferslot](https://transferslot.com), ignore their messages. This
+is not great. (Of course, we could handle the pending message after a certain
+time, but it requires more work that aren’t really necessary in that case).
+Three alternatives are possible in this possibility, such as : * Allowing for 3
+free messages before blocking the next ones * Hiding name and email from the
+beginning. The seller would have to pay to get the detailed information (same
+issue as the listing fee) * Block from scratch (same issue as the listing fee)
+### Relying on trust This is one of my favorites, even though it has a high
+chance of not working. The idea is simple: We would ask our sellers to let us
+know once their project is sold (they are kind of required if they want the
+project to be removed/updated on [Transferslot](https://transferslot.com)). Once
+we acknowledge that the sale was successful thanks to
+[Transferslot](https://transferslot.com), we can request the seller to pay us a
+fee (15% for instance) of the sold price. The issue here is that: 1. We can’t
+enforce a seller to pay us 2. They can lie, saying they sold outside of
+[Transferslot](https://transferslot.com). That’s the reason I named this part
+“relying on trust”. Maybe not all the sellers will pay, but if a few do, it will
+still be beneficial. ### Being legal Improving the “Relying on trust” part, we
+could require our sellers to sign a document which engages themselves on having
+to pay a fee if we successfully help them make a sale. Having to sign this
+document will enforce the seriousness of it and will decrease the risk of user
+avoiding to pay the fee. ### Being the middleman Another solution would be that
+instead of buyers reaching out directly to sellers on
+[Transferslot](https://transferslot.com), it would be us that receives the
+messages. We would either reply directly if we already know the answer or reach
+out to the seller for more details. Of course, buyers could contact the seller
+directly from their website since the data aren’t hidden, but we would rely on
+the fact that it’s easier for the buyer to just fill the form on Transferslot’s
+website instead of having to search for contacts credentials. One of the cons
+here is that it will require a lot more work on our side, with a low response
+time. But on the pros, working as a middleman will give us the chance to better
+handle the sales, eventually catch bad sellers faster, and requesting a fee upon
+successful sale. ### Being an escrow service Finally, one of the most advanced
+way we can earn money while sharing a win-win with our customers. By
+implementing two of the discussed options here; Being legal and being the
+middleman, we will ensure that the transaction occurs and it will help us
+identify any issues, work with both the seller and the buyer. This will also
+provide a chain of trust as we will manage the whole transaction and ensure
+everything goes smoothly. Along the transaction, taking a fee will be easy and
+evident. But there are big disadvantages to doing so. The first one is the time
+involved. We won’t handle one project at a time, but multiple. Managing the
+discussions between the sellers and buyers, hoping we don’t mix the projects and
+provide incorrect numbers. Moreover, by being in the middle at this level, we
+engage ourself legally too. If the sale goes south and one member has already
+invested in it (paid the price or send all their code for instance), all the
+issues might fall on us. At this level, I’m not talking about small angry
+emails, but a potential lawsuit! Even though that’s clearly the best option
+there, it’s also the riskier. That’s why we haven’t done it yet. ### Conclusion
+We still don’t know our next move regarding Transferslot. The difficulty here is
+that we are in the middle, between Flippa and
+[FEInternational](https://feinternational.com/), and we can’t implement all the
+options. I think we need to find what service we want to provide from A-Z and
+use a revenue model that fits greatly with the service. There are a lot of
+options here, some more honest than others, and that a key point — at least for
+me — honesty. _Thanks for reading, I hope it was helpful for you. If you have
+any other ideas we could implement, I’d be happy to discuss them with you. It’s
+also not impossible that we try some of the mentioned methods in the future on
+[Transferslot](https://transferslot.com), and see which one works best._]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Excitation is killing productivity]]></title>
+            <link>https://cnicodeme.com/posts/excitation-is-killing-productivity</link>
+            <guid>https://cnicodeme.com/posts/excitation-is-killing-productivity</guid>
+            <pubDate>Tue, 01 Aug 2017 17:18:57 GMT</pubDate>
+            <description><![CDATA[I don’t know about you, but when I’m working on a project, I sometimes have a few moment of excitations thinking about the future, how the project will be, how that specific feature I’m working on will trigger some great feedback when I’ll start to talk about it…]]></description>
+            <content:encoded><![CDATA[I don’t know about you, but when I’m working on a project, I sometimes have a
+few moment of excitations thinking about the future, how the project will be,
+how that specific feature I’m working on will trigger some great feedback when
+I’ll start to talk about it… Even though those excitations are what motivate me
+to work on the project, they tend to kill my productivity. I tend to stray away
+from the current work and start to wander in my imaginary land. Moreover, those
+imaginary moments are just that, imaginary! And often, the reality is harsher,
+that feature will go unnoticed and that’s all. We, Humans, are creature that
+doesn’t live in the present. We live in the past or the future. We always are
+thinking about something that happened, or how thing will happen. And the
+situation here is a typical example of that. The issue with this is that those
+moments are a thing from the far away future and I tend to forget about all the
+hard work in-between. That specific feature is not ready yet, and once it will
+be, after hours of work, I will still have to genuinely find a solution to
+promote it in the best way possible. Meaning I will have to work more in order
+to achieve what my brain thought about the future three months from now. It’s
+easy to become distracted by the things that motivate us. It’s easy to become
+distracted by the great future that is in front of us, but in order to achieve
+it, we need to think about the hard work in between. Success doesn’t happen
+overnight.]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Getting a hold of the competition]]></title>
+            <link>https://cnicodeme.com/posts/getting-a-hold-of-the-competition</link>
+            <guid>https://cnicodeme.com/posts/getting-a-hold-of-the-competition</guid>
+            <pubDate>Tue, 25 Jul 2017 14:01:19 GMT</pubDate>
+            <description><![CDATA[ebook was the first on the market? Do you think Internet
+Explorer was the first? Is your product the first on the market? No, no and
+certainly no.If you don’t find any competitors, it means one of two things: 1.
+The niche is not viable 2. You haven’t correctly defined your product. I really
+hope for you that you are on option 2, and if it is, you should start by
+re-analyzing the market by updating your vision. Maybe by changing the
+definition of your product, you will discover a saturated niche and all your
+hopes will start to dry out. That’s what happened to me with SellDom. When I
+first started working on it, I was aware that making a platform to sell unused
+domains was not the first of its kind. I was already aware of competitors like
+[Sedo](https://sedo.com/us/), [Flippa](https://www.flippa.com), [GoDaddy
+auctions](https://auctions.godaddy.com/) and [Namecheap
+auctions](https://www.namecheap.com/domains/marketplace/buy-domains.aspx). Even
+though these are big players in the market, I let myself think that I could
+start targeting a specific niche of this market, more specifically the “Indie
+hackers”, those who buy domains for side projects or the next big things, but
+never works on it and finally let the name die. Moreover, when you are motivated
+in a project, you tend to ignore the facts and minimize the risks. “Competitors?
+Yeah but not much! And the current ones have shitty design! It will be easy to
+beat them!”. Oh boy, you are wrong! So the wrong me started working on SellDom,
+full of hopes that it would be possible to gain some market share out of those
+competitors. Once live, I started to search for ideas on how to get customers,
+and while searching, I varied my terms a bit on Google and discovered more
+competitors than before, including [Undeveloped.com](https://undeveloped.com),
+[Namejet](http://www.namejet.com/), [Snapnames](https://www.snapnames.com/).
+This gave me a big motivational drop and I started to think about dropping the
+project already! After only a few weeks online, a thousand dollars spent on it…
+But that’s the things with projects, it’s not always great, otherwise, everyone
+would do it. It’s hard, it’s harsh, and you have to hustle to merit it. So I
+slept on it over the weekend, calming my bad thoughts and thinking about ways to
+overcome this first issue. I came back fresh the Monday, and on my inbox was
+sitting a mail from my designer letting me know he worked on some great parts of
+the project and gave me a few awesome screenshots of
+[SellDom](https://www.selldom.io) along the way. Even though he knew I had
+doubts, he still continued to work on it and brought me some incredible changes!
+**And this is the key! Even though it’s hard, even though you are starting to
+loose hope, never stop what you are doing, keep on fighting, because, in the
+end, it’s only those who are still standing that win.**_Wants to be a part of my
+experiences on growing [SellDom](https://www.selldom.io)? You can share your
+ideas on how to get visitors/customers, and I’ll implement them, share my
+experience and the results with you!_...]]></description>
+            <content:encoded><![CDATA[One reflex you must have when you start a new project, is to check the
+competition, how it’s working, how healthy they are, etc. One red flag that must
+arise from this, is “no competitors”. There is no such thing as no competitors.
+Do you believe Facebook was the first on the market? Do you think Internet
+Explorer was the first? Is your product the first on the market? No, no and
+certainly no.If you don’t find any competitors, it means one of two things: 1.
+The niche is not viable 2. You haven’t correctly defined your product. I really
+hope for you that you are on option 2, and if it is, you should start by
+re-analyzing the market by updating your vision. Maybe by changing the
+definition of your product, you will discover a saturated niche and all your
+hopes will start to dry out. That’s what happened to me with SellDom. When I
+first started working on it, I was aware that making a platform to sell unused
+domains was not the first of its kind. I was already aware of competitors like
+[Sedo](https://sedo.com/us/), [Flippa](https://www.flippa.com), [GoDaddy
+auctions](https://auctions.godaddy.com/) and [Namecheap
+auctions](https://www.namecheap.com/domains/marketplace/buy-domains.aspx). Even
+though these are big players in the market, I let myself think that I could
+start targeting a specific niche of this market, more specifically the “Indie
+hackers”, those who buy domains for side projects or the next big things, but
+never works on it and finally let the name die. Moreover, when you are motivated
+in a project, you tend to ignore the facts and minimize the risks. “Competitors?
+Yeah but not much! And the current ones have shitty design! It will be easy to
+beat them!”. Oh boy, you are wrong! So the wrong me started working on SellDom,
+full of hopes that it would be possible to gain some market share out of those
+competitors. Once live, I started to search for ideas on how to get customers,
+and while searching, I varied my terms a bit on Google and discovered more
+competitors than before, including [Undeveloped.com](https://undeveloped.com),
+[Namejet](http://www.namejet.com/), [Snapnames](https://www.snapnames.com/).
+This gave me a big motivational drop and I started to think about dropping the
+project already! After only a few weeks online, a thousand dollars spent on it…
+But that’s the things with projects, it’s not always great, otherwise, everyone
+would do it. It’s hard, it’s harsh, and you have to hustle to merit it. So I
+slept on it over the weekend, calming my bad thoughts and thinking about ways to
+overcome this first issue. I came back fresh the Monday, and on my inbox was
+sitting a mail from my designer letting me know he worked on some great parts of
+the project and gave me a few awesome screenshots of
+[SellDom](https://www.selldom.io) along the way. Even though he knew I had
+doubts, he still continued to work on it and brought me some incredible changes!
+**And this is the key! Even though it’s hard, even though you are starting to
+loose hope, never stop what you are doing, keep on fighting, because, in the
+end, it’s only those who are still standing that win.**_Wants to be a part of my
+experiences on growing [SellDom](https://www.selldom.io)? You can share your
+ideas on how to get visitors/customers, and I’ll implement them, share my
+experience and the results with you!_]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Essay on marketing.]]></title>
+            <link>https://cnicodeme.com/posts/essay-on-marketing</link>
+            <guid>https://cnicodeme.com/posts/essay-on-marketing</guid>
+            <pubDate>Mon, 24 Jul 2017 17:18:24 GMT</pubDate>
+            <description><![CDATA[As a developer, when I was reading that “developing your product is just the tip of the iceberg”, I was thinking it wasn’t true. When you see all the hard work you have to put into it, your mind doesn’t accept the fact that this is only the easy part. And I was wrong.]]></description>
+            <content:encoded><![CDATA[As a developer, when I was reading that “developing your product is just the tip
+of the iceberg”, I was thinking it wasn’t true. When you see all the hard work
+you have to put into it, your mind doesn’t accept the fact that this is only the
+easy part. And I was wrong. The thing is, your product can be the most
+complicated thing on earth, it doesn’t matter. Once your product is online, what
+matter is bringing customers in. When you start thinking about it, you quickly
+realize that even though there is plenty of possibilities to get your word out,
+it’s not as easy as you initially thought. You have to fight against
+competitors, you have to be clever on how you deliver your message in order to
+bring more visitors and you have to be even more clever to convert them as
+customers. The problem is that I’m just a simple developer and marketing as
+never been my strong suit. But I’m also pretty sure I’m not the only one. That’s
+why I decided to start this blog, related to my recent project,
+[SellDom](https://www.selldom.io). I plan to try a variety of techniques, free
+and paid, and see what works, how much, and the ROI for each techniques. My
+objective here is to share with you my experiences in marketing and hopefully,
+getting better and better in this strange word. I already have a list of …
+things to try — I wouldn’t say “techniques” because some of them doesn’t have
+the requirements to be considered technical — but I need your help. I need your
+help in suggesting me what to try. Considering it won’t be expensive, I’ll try
+them, share my experience about it, the difficulty, the results and the ROI from
+it. In the end, if all goes well, this blog will be a directory of what works
+and what doesn’t, but keep in mind these results are loosely tied with my
+business and you will have completely differents results with yours. But it’s
+worth a try, isn’t it?]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[The end of AdSense?]]></title>
+            <link>https://cnicodeme.com/posts/the-end-of-adsense</link>
+            <guid>https://cnicodeme.com/posts/the-end-of-adsense</guid>
+            <pubDate>Mon, 19 Jun 2017 10:43:10 GMT</pubDate>
+            <description><![CDATA[More and more people are starting to ignore everything that looks like ads. When Google was placing advertising on the right of a search result, it was proven that people started to completely remove it from their vision, simply ignoring it. It’s called banner blindness.]]></description>
+            <content:encoded><![CDATA[Wow, this is a strong title, isn’t it? And I’m pretty sure Google will find a
+way to avoid this, as it is one of it’s best source of revenue. But stay with me
+while I share my point of view … More and more people are starting to ignore
+everything that looks like ads. When Google was placing advertising on the right
+of a search result, it was proven that people started to completely remove it
+from their vision, simply ignoring it. It’s called [banner
+blindness](https://en.wikipedia.org/wiki/Banner_blindness)!Now that ads are
+placed on a top of a search result, there is two behaviour occurring. Click on
+it, to make the company pay for nothing, or avoid clicking on it because having
+ads leaves an oddly feeling of being duped. Moreover, Ad-blockers are on the
+rise and many users are installing them every day … to the point that even
+browser makers, including Google, are thinking of [implementing them directly
+within their
+browser](https://techcrunch.com/2017/04/19/google-said-to-be-planning-a-built-in-ad-blocker-for-chrome/).
+Many website owners that make money via banner advertising are seeing [big drops
+every few months](https://news.ycombinator.com/item?id=14577016). And in order
+to counter this, one of the main example I can think of is used by the news
+website: They desperately try to force you to disable your ad-blocker — This is
+not sustainable. But don’t get me wrong, the end of AdSense doesn’t mean the end
+of ads, absolutely not. Marketers will find an alternative way to send you their
+products, and one of the most efficient ways is, for me, the integrated ads.
+Many startups and a few big companies are starting to integrate into their
+design, ads that don’t appear like this at first sight. I think this way is
+better, mainly because it doesn’t disturb the initial reading of the page (quick
+overview) and once you reach the advertising, you identify it and skip it.
+That’s it! It doesn’t clutter your design, design requires much overhead for
+your visitors, and can be simply ignored when reached. Some of the websites that
+do it well include [IndieHackers](https://www.indiehackers.com/) and
+[Sidebar](https://sidebar.io/).Moreover, this kind of integration provides
+another great source of revenue. Instead of working with an advertising company
+like AdSense that will provide you with a small CTR/CPM while charging too much
+for the buyer, you can directly negotiate with someone that wants to appear on
+your website, and quickly make a few hundred. Everyone is happy!… well, except
+AdSense, which adds more argument to my post ;) I do think that we will tend
+more and more toward this model of revenue, at least until someone finds a
+better way to provide us with advertising that doesn’t annoy users while still
+providing revenues to the host. We will see what the future holds. Until then …]]></content:encoded>
+        </item>
+    </channel>
+</rss>
