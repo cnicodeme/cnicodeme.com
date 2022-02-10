@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@nuxtjs/google-analytics": "^2.2.3",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "sass-loader": "^8.0.2",
     "sharp": "^0.25.2"
   }
