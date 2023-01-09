@@ -12,7 +12,7 @@
     "create": "./bin/create.js $*"
   },
   "dependencies": {
-    "@nuxtjs/feed": "^1.1.0",
+    "@nuxtjs/feed": "^2.0.0",
     "@nuxtjs/sitemap": "^2.2.0",
     "baguettebox.js": "^1.11.1",
     "frontmatter-markdown-loader": "^3.3.0",
